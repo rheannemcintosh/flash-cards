@@ -2,12 +2,10 @@ extends layout.pug
 
 block content
 	section#content
-		ul
-			each colour in colours
-				li= colour
-		h2= prompt
+		h2= text
 		if hint
 			p
 				i Hint: #{hint}
-		else
-			p (There is no hint.)
+		a(href=`${id}?side=${sideToShow}`)= sideToShowDisplay
+		br
+		a(href=`/cards`) Next Card
